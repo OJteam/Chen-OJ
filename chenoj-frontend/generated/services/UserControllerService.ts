@@ -165,6 +165,27 @@ export class UserControllerService {
         });
     }
     /**
+     * listUserByPageWhenRegister
+     * @param userQueryRequest userQueryRequest
+     * @returns BaseResponse_Page_User_ OK
+     * @returns any Created
+     * @throws ApiError
+     */
+    public static listUserByPageWhenRegisterUsingPost(
+        userQueryRequest: UserQueryRequest,
+    ): CancelablePromise<BaseResponse_Page_User_ | any> {
+        return __request(OpenAPI, {
+            method: 'POST',
+            url: '/api/user/list/pagewr',
+            body: userQueryRequest,
+            errors: {
+                401: `Unauthorized`,
+                403: `Forbidden`,
+                404: `Not Found`,
+            },
+        });
+    }
+    /**
      * userLogin
      * @param userLoginRequest userLoginRequest
      * @returns BaseResponse_LoginUserVO_ OK

@@ -1,5 +1,9 @@
 # chenoj-frontend
 
+## 快速根据后台生成代码
+```shell
+node generate-api.mjs
+```
 ## Project setup
 ```
 npm install

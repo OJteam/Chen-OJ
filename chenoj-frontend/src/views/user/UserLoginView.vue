@@ -17,11 +17,14 @@
           placeholder="请输入密码"
         />
       </a-form-item>
-      <a-form-item>
+      <div style="display: flex; justify-content: center; gap: 17px">
         <a-button type="primary" html-type="submit" style="width: 120px"
           >登录</a-button
         >
-      </a-form-item>
+        <a-button type="primary" @click="jumpToRegister" style="width: 120px"
+          >注册</a-button
+        >
+      </div>
     </a-form>
   </div>
 </template>
@@ -42,7 +45,8 @@ const router = useRouter();
 const store = useStore();
 
 /**
- * 表单信息
+ * 提交表单
+ * @param data
  */
 const handleSubmit = async () => {
   const res = await UserControllerService.userLoginUsingPost(form);
@@ -56,5 +60,12 @@ const handleSubmit = async () => {
   } else {
     message.error("登录失败，" + res.message);
   }
+};
+// 从登录页跳转到注册页
+const jumpToRegister = async () => {
+  router.push({
+    path: "/user/register",
+    replace: true,
+  });
 };
 </script>

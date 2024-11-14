@@ -9,7 +9,7 @@
       </a-layout-content>
       <a-layout-footer class="footer">
         <a href="https://github.com/guzhouyiye/ChenOJ" target="_blank">
-          编程导航 by 孤舟一叶
+          Chen OJ by 孤舟一叶
         </a>
       </a-layout-footer>
     </a-layout>
@@ -23,7 +23,7 @@
 }
 
 #basicLayout .content {
-  background: linear-gradient(to right, #bbb, #fff);
+  background: linear-gradient(to right, #fefefe, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
